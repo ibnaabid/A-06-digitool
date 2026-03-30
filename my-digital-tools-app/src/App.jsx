@@ -7,6 +7,7 @@ import CountingBanner from './Counting/CountingBanner';
 import Feature from "./Card/Feature"
 import CardApi from "./Card/CardApi"
 import CardAvter from './Card/CardAvter';
+import PricingCard from "./Card/PricingCard"
 function App() {
   // tab ar jnno state nibo;;
   const[tabState,setTabState]=useState("Products")
@@ -38,6 +39,7 @@ function App() {
       setTabState={setTabState}
       ></CardApi>
       <CardAvter></CardAvter>
+      <PricingCard></PricingCard>
     </Suspense>
 
     </>
