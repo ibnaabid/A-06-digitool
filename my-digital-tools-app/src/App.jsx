@@ -4,6 +4,8 @@ import './App.css'
 import Main from './navbar/mainPage/Main';
 import Navbar from './navbar/Navbar';
 import CountingBanner from './Counting/CountingBanner';
+import Feature from "./Card/Feature"
+import CardApi from "./Card/CardApi"
 function App() {
   
 
@@ -13,6 +15,8 @@ function App() {
       <Navbar></Navbar>
       <Main></Main>
       <CountingBanner></CountingBanner>
+      <Feature></Feature>
+      <CardApi></CardApi>
     </Suspense>
 
     </>
