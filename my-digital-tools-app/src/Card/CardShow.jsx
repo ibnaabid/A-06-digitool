@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const CardShow = ({card ,setCardData,cardData}) => {
+import { CircleCheck } from 'lucide-react';
+
+const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
     console.log(card,setCardData,cardData)
+
+    // button ta sudhu hbe card ar state ar jnno
+    const[button,setButton]=useState(false)
+
+    // aikhne card ta show korabo:
+    
+     const handleAdd = () => {
+    setButton(true)
+
+    // duplicate check
+    if (!cart.some(item => item.id === card.id)) {
+      setCart([...cart, card])
+    }
+
+    // auto cart tab e
+    setTabState("Cart")
+  }
+
+
     return (
         <div className='ml-9 my-5 mt-8'>
             <div className="card w-96 bg-base-100 shadow-sm">
   <div className="card-body">
     <span className="badge badge-xs badge-warning">{card.tag}</span>
+    <img src={card.icon} alt="" sizes="" srcset="" />
           
     <div className="flex justify-between">
 
@@ -17,14 +39,22 @@ const CardShow = ({card ,setCardData,cardData}) => {
     <ul className="mt-6 flex flex-col gap-2 text-xs">
   {
     card.features.map((feature, index) => (
-      <li key={index}>
-        ✔️ {feature}
+      <li className='flex text-green-300 gap-3' key={index}>
+        
+    <CircleCheck />
+ {feature}
       </li>
     ))
   }
 </ul>
     <div className="mt-6">
-      <button className="btn btn-primary rounded-2xl btn-block">Buy Now</button>
+
+      <button
+        onClick={handleAdd}
+       className={`btn ${button?"btn-success btn-soft rounded-2xl btn-block" :"btn-primary btn-soft rounded-2xl btn-block"}`}>
+        {button?"Ordered" :"Add to Cart"}
+       
+       </button>
     </div>
   </div>
 </div>

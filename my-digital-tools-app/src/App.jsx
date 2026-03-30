@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import './App.css'
 import Main from './navbar/mainPage/Main';
 import Navbar from './navbar/Navbar';
@@ -7,6 +7,8 @@ import CountingBanner from './Counting/CountingBanner';
 import Feature from "./Card/Feature"
 import CardApi from "./Card/CardApi"
 function App() {
+  // tab ar jnno state nibo;;
+  const[tabState,setTabState]=useState("Products")
   
 
   return (
@@ -16,7 +18,23 @@ function App() {
       <Main></Main>
       <CountingBanner></CountingBanner>
       <Feature></Feature>
-      <CardApi></CardApi>
+    <div className='flex items-center justify-center mt-10 gap-3'>
+        <button onClick={()=>setTabState('Products')}
+         className={`btn text-xl ${tabState==="Products" ?"btn-primary rounded-2xl":"btn-neutral rounded-2xl"}`}>
+        Products
+      </button>
+<button onClick={()=>setTabState('Cart')}
+         className={`btn  text-xl ${tabState==="Cart" ?"btn-primary rounded-2xl":"btn-neutral rounded-2xl"}`}>
+        Cart</button>
+
+    </div>
+
+
+
+      <CardApi
+      tabState={tabState}
+      setTabState={setTabState}
+      ></CardApi>
     </Suspense>
 
     </>

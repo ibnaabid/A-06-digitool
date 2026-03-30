@@ -7,7 +7,7 @@ const Main = () => {
     return (
         <div className='mx-auto container mt-10'>
             <div className='flex border w-sm rounded-2xl'>
-                <h2 className='flex font-bold py-3 pl-4 gap-3'> 
+                <h2 className='flex text-indigo-400 font-bold py-3 pl-4 gap-3'> 
     <CircleDot />New: AI-Powered Tools Available</h2>
     </div>
                 <div className='flex items-center justify-between mr-8'>
