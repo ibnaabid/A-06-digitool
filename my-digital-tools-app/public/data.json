@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder",
+    "description": "Create professional resumes easily",
+    "price": 10,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF"
+    ],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Generator",
+    "description": "Build stunning portfolios quickly",
+    "price": 15,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Custom domain",
+      "Responsive design",
+      "SEO friendly"
+    ],
+    "icon": "🌐"
+  },
+  {
+    "id": 3,
+    "name": "AI Content Writer",
+    "description": "Generate blog and marketing content",
+    "price": 25,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "SEO optimized content",
+      "Multiple languages",
+      "Fast generation"
+    ],
+    "icon": "✍️"
+  },
+  {
+    "id": 4,
+    "name": "Logo Maker",
+    "description": "Design logos instantly",
+    "price": 50,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "1000+ icons",
+      "Custom colors",
+      "High resolution export"
+    ],
+    "icon": "🎨"
+  },
+  {
+    "id": 5,
+    "name": "Social Media Scheduler",
+    "description": "Schedule posts across platforms",
+    "price": 12,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Auto posting",
+      "Analytics",
+      "Multi-platform support"
+    ],
+    "icon": "📅"
+  },
+  {
+    "id": 6,
+    "name": "Invoice Generator",
+    "description": "Create and manage invoices",
+    "price": 8,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Custom templates",
+      "Download PDF",
+      "Auto calculations"
+    ],
+    "icon": "🧾"
+  },
+  {
+    "id": 7,
+    "name": "Email Marketing Tool",
+    "description": "Send bulk emails with ease",
+    "price": 30,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Email templates",
+      "Subscriber management",
+      "Campaign analytics"
+    ],
+    "icon": "📧"
+  },
+  {
+    "id": 8,
+    "name": "Password Manager",
+    "description": "Securely store your passwords",
+    "price": 20,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Encryption security",
+      "Auto fill",
+      "Cloud sync"
+    ],
+    "icon": "🔐"
+  }
+]
