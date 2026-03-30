@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { CircleCheck } from 'lucide-react';
 
-const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
+const CardShow = ({card ,setCart,cart,setCardData,cardData}) => {
     console.log(card,setCardData,cardData)
 
     // button ta sudhu hbe card ar state ar jnno
@@ -18,8 +18,6 @@ const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
       setCart([...cart, card])
     }
 
-    // auto cart tab e
-    setTabState("Cart")
   }
 
 
@@ -35,11 +33,11 @@ const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
       <h2 className='text-3xl font-bold'>{card.name}</h2>
       <span className="text-xl font-bold">${card.price}/mon </span>
     </div>
-    <h2 className='text-2xl font-bold text-gray-400 pt-3'>{card.description}</h2>
+    <h2 className='text-2xl font-bold text-gray-500 pt-3'>{card.description}</h2>
     <ul className="mt-6 flex flex-col gap-2 text-xs">
   {
     card.features.map((feature, index) => (
-      <li className='flex text-green-300 gap-3' key={index}>
+      <li className='flex text-green-500 gap-3' key={index}>
         
     <CircleCheck />
  {feature}
@@ -51,6 +49,7 @@ const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
 
       <button
         onClick={handleAdd}
+        disabled={button}
        className={`btn ${button?"btn-success btn-soft rounded-2xl btn-block" :"btn-primary btn-soft rounded-2xl btn-block"}`}>
         {button?"Ordered" :"Add to Cart"}
        

@@ -6,6 +6,7 @@ import Navbar from './navbar/Navbar';
 import CountingBanner from './Counting/CountingBanner';
 import Feature from "./Card/Feature"
 import CardApi from "./Card/CardApi"
+import CardAvter from './Card/CardAvter';
 function App() {
   // tab ar jnno state nibo;;
   const[tabState,setTabState]=useState("Products")
@@ -25,7 +26,8 @@ function App() {
       </button>
 <button onClick={()=>setTabState('Cart')}
          className={`btn  text-xl ${tabState==="Cart" ?"btn-primary rounded-2xl":"btn-neutral rounded-2xl"}`}>
-        Cart</button>
+        Cart
+        </button>
 
     </div>
 
@@ -35,6 +37,7 @@ function App() {
       tabState={tabState}
       setTabState={setTabState}
       ></CardApi>
+      <CardAvter></CardAvter>
     </Suspense>
 
     </>
