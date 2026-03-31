@@ -14,9 +14,18 @@ const CardApi = ({ tabState, setTabState }) => {
       .then(data => setCardData(data));
   }, []);
 
+
+  // card pricing
+  const total=cart.reduce((sum,item)=>
+  sum+item.price,0
+  )
+const paymentHandle=(()=>
+  setCart([])
+)
+
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {/* Products Tab */}
         {tabState === "Products" &&
@@ -38,12 +47,11 @@ const CardApi = ({ tabState, setTabState }) => {
         {tabState === "Cart" && (
           cart.length === 0 ? (
 <div>
-    <img src="" alt="" />
-                <p className="col-span-3 text-white text-center text-4xl">Cart is empty</p>
+                <p className="text-white text-center pt-6 text-4xl">Cart is empty</p>
 </div>
           ) : (
             cart.map(item => (
-              <div key={item.id} className="border-2 border-amber-400 p-4 rounded-xl shadow-lg ml-9">
+              <div key={item.id} className="border-2 pt-9 border-amber-400 p-4 rounded-xl shadow-lg ml-9">
                 <h2 className="text-xl font-bold">{item.name}</h2>
               <div className='flex justify-between items-center font-bold text-2xl pt-4'>
                   <h2>{item.tagType}</h2>
@@ -52,15 +60,32 @@ const CardApi = ({ tabState, setTabState }) => {
                 <button
                   className="btn btn-soft  rounded-2xl btn-error mt-2"
                   onClick={() => setCart(cart.filter(c => c.id !== item.id))}
+                  
                 >
                   Remove
                 </button>
+                <div>
+      </div>
+
               </div>
+              
+              
             ))
+            
+            
           )
+          
+          
         )}
 
       </div>
+                                        <h2 className="text-xl pl-7 py-4  font-bold mt-8">
+
+  Total: ${total}/mon
+</h2>
+<button onClick={paymentHandle} className='btn btn-soft btn-ghost w-full mx-auto text-center rounded-3xl'>Proceed to Checkout</button>
+                
+
     </div>
   );
 };

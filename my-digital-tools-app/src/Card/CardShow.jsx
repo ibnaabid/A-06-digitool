@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { CircleCheck } from 'lucide-react';
 
-const CardShow = ({card ,setCart,cart,setCardData,cardData}) => {
+const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
     console.log(card,setCardData,cardData)
 
     // button ta sudhu hbe card ar state ar jnno
@@ -12,13 +12,16 @@ const CardShow = ({card ,setCart,cart,setCardData,cardData}) => {
     
      const handleAdd = () => {
     setButton(true)
-
+  
     // duplicate check
     if (!cart.some(item => item.id === card.id)) {
       setCart([...cart, card])
     }
+    setTabState("Cart")
 
   }
+
+  // card pricing
 
 
     return (
