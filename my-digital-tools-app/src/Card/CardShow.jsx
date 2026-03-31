@@ -34,8 +34,8 @@ const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
         <div className='ml-9 my-5 mt-8'>
             <div className="card w-96 bg-base-100 shadow-sm">
   <div className="card-body">
-    <span className="badge badge-xs badge-warning">{card.tag}</span>
-    <img src={card.icon} alt="" sizes="" srcset="" />
+    <span className="badge text-xl px-5 py-5 badge-xs badge-secondary">{card.tag}</span>
+    <h2 className='w-[300px]' >{card.icon} </h2>
           
     <div className="flex justify-between">
 

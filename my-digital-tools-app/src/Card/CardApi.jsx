@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardShow from "../Card/CardShow";
 import { toast } from 'react-toastify';
-// import Shopping from "../../../B13-A6-DigiTools-Platform/assets/products"
 const CardApi = ({ tabState, setTabState }) => {
 
   const [cardData, setCardData] = useState([]);
@@ -86,17 +85,17 @@ toast.success("payment successfully")
           
           
         )}
-
-      </div>
                                         <h2 className="text-xl pl-7 py-4  font-bold mt-8">
 
   Total: ${total}/mon
-</h2>
-<button onClick={paymentHandle} className='btn btn-soft btn-neutral w-full mx-auto text-center rounded-3xl'>
+  
+<button onClick={paymentHandle} className='btn mr-4 btn-soft btn-neutral w-full mt-5 mx-auto text-center rounded-3xl'>
   
   Proceed to Checkout</button>
-                
-
+</h2>
+      
+      </div>
+              
     </div>
   );
 };
