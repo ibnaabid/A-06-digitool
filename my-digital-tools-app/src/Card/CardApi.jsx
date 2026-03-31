@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import CardShow from "../Card/CardShow";
 import { toast } from 'react-toastify';
-const CardApi = ({ tabState, setTabState }) => {
+const CardApi = ({ tabState,cart,setCart, setTabState }) => {
 
   const [cardData, setCardData] = useState([]);
-
-//   CART PASS KORAR JNNO AITA STATE:
-  const [cart, setCart] = useState([]); 
 
   useEffect(() => {
     fetch("/data.json")

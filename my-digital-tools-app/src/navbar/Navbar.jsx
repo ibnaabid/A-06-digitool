@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
-const Navbar = () => {
+const Navbar = ({cart}) => {
     return (
         <div className='container border-b-2 mx-auto flex justify-between items-center py-5'>
 
@@ -20,7 +20,9 @@ const Navbar = () => {
 
             {/* Right (Auth Buttons) */}
             <div className='flex items-center gap-4'>
-                <h2 className='cursor-pointer flex gap-2 font-bold'>   <ShoppingCart />Login</h2>
+                <button className='cursor-pointer btn text-red-700 text-xl rounded-full btn-soft btn-neutral'>   <ShoppingCart /
+                >{cart.length}</button>
+                <h2 className='font-bold'>Login</h2>
                 <button className='btn bg-[#4F39F6] rounded-2xl text-white'>
                     Get Started
                 </button>

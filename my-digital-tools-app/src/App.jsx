@@ -15,12 +15,17 @@ import PricingCard from "./Card/PricingCard"
 function App() {
   // tab ar jnno state nibo;;
   const[tabState,setTabState]=useState("Products")
+
+
+  //   CART PASS KORAR JNNO AITA STATE:
+    const [cart, setCart] = useState([]); 
+  
   
 
   return (
     <>
     <Suspense fallback={<span className="loading loading-infinity loading-lg"></span>} >
-      <Navbar></Navbar>
+      <Navbar cart={cart}></Navbar>
       <Main></Main>
       <CountingBanner></CountingBanner>
       <Feature></Feature>
@@ -42,6 +47,8 @@ function App() {
       tabState={tabState}
       setTabState={setTabState}
       toast={toast}
+      setCart={setCart}
+      cart={cart}
       ></CardApi>
       <CardAvter></CardAvter>
       <PricingCard></PricingCard>
