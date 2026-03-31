@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardShow from "../Card/CardShow";
+import { toast } from 'react-toastify';
 // import Shopping from "../../../B13-A6-DigiTools-Platform/assets/products"
 const CardApi = ({ tabState, setTabState }) => {
 
@@ -19,13 +20,17 @@ const CardApi = ({ tabState, setTabState }) => {
   const total=cart.reduce((sum,item)=>
   sum+item.price,0
   )
-const paymentHandle=(()=>
+const paymentHandle=(()=>{
+  
   setCart([])
+
+toast.success("payment successfully")
+}
 )
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
         {/* Products Tab */}
         {tabState === "Products" &&
@@ -59,7 +64,11 @@ const paymentHandle=(()=>
               </div>
                 <button
                   className="btn btn-soft  rounded-2xl btn-error mt-2"
-                  onClick={() => setCart(cart.filter(c => c.id !== item.id))}
+                  onClick={() => {setCart(cart.filter(c => c.id !== item.id))
+                    toast.error("card removed!")
+                    
+                  }
+                }
                   
                 >
                   Remove
@@ -83,7 +92,9 @@ const paymentHandle=(()=>
 
   Total: ${total}/mon
 </h2>
-<button onClick={paymentHandle} className='btn btn-soft btn-ghost w-full mx-auto text-center rounded-3xl'>Proceed to Checkout</button>
+<button onClick={paymentHandle} className='btn btn-soft btn-neutral w-full mx-auto text-center rounded-3xl'>
+  
+  Proceed to Checkout</button>
                 
 
     </div>

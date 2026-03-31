@@ -8,6 +8,9 @@ import Feature from "./Card/Feature"
 import CardApi from "./Card/CardApi"
 import CardAvter from './Card/CardAvter';
 import PricingCard from "./Card/PricingCard"
+  import { ToastContainer, toast } from 'react-toastify';
+
+  
 function App() {
   // tab ar jnno state nibo;;
   const[tabState,setTabState]=useState("Products")
@@ -37,9 +40,12 @@ function App() {
       <CardApi
       tabState={tabState}
       setTabState={setTabState}
+      toast={toast}
       ></CardApi>
       <CardAvter></CardAvter>
       <PricingCard></PricingCard>
+      <ToastContainer />
+
     </Suspense>
 
     </>

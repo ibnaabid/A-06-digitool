@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
+
 import { CircleCheck } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
     console.log(card,setCardData,cardData)
@@ -14,8 +16,12 @@ const CardShow = ({card,setTabState ,setCart,cart,setCardData,cardData}) => {
     setButton(true)
   
     // duplicate check
-    if (!cart.some(item => item.id === card.id)) {
+    if (!cart.find(item => item.id === card.id)) {
       setCart([...cart, card])
+      toast.success("added to Cart")
+    }
+    else{
+      toast.error("already Added")
     }
     setTabState("Cart")
 
