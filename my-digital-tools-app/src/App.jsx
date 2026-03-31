@@ -9,6 +9,7 @@ import CardApi from "./Card/CardApi"
 import CardAvter from './Card/CardAvter';
 import PricingCard from "./Card/PricingCard"
   import { ToastContainer, toast } from 'react-toastify';
+  import Footer from "./footer/Footer"
 
   
 function App() {
@@ -45,7 +46,7 @@ function App() {
       <CardAvter></CardAvter>
       <PricingCard></PricingCard>
       <ToastContainer />
-
+<Footer></Footer>
     </Suspense>
 
     </>
