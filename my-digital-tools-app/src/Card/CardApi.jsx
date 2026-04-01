@@ -53,7 +53,10 @@ toast.success("payment successfully")
           ) : (
             cart.map(item => (
               <div key={item.id} className="border-2 pt-9 border-amber-400 p-4 rounded-xl shadow-lg ml-9">
-                <h2 className="text-xl font-bold">{item.name}</h2>
+                
+                <div className='flex justify-center items-center'>
+                  <h2 className=' w-full'>{item.icon}</h2>
+                <h2 className="text-xl text-green-600 font-bold">{item.name}</h2></div>
               <div className='flex justify-between items-center font-bold text-2xl pt-4'>
                   <h2>{item.tagType}</h2>
                 <p>${item.price}</p>

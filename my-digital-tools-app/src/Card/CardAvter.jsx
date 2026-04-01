@@ -5,7 +5,7 @@ import rocket from "../../../B13-A6-DigiTools-Platform/assets/products/rocket.pn
 
 const CardAvter = () => {
     return (
-        <div className='text-center mt-7 font-bold'>
+        <div className='text-center  mt-7 font-bold'>
   <h1 className='text-5xl'>Get Started in 3 Steps</h1>
   <p className='text-gray-400 pt-4'>
     Start using premium digital tools in minutes, not hours.
